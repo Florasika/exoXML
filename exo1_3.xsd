@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="livre_comptes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="mois"/>
+        <xs:element ref="solde_initial"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="operation"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="mois" type="xs:string"/>
+  <xs:element name="solde_initial" type="xs:string"/>
+  <xs:element name="operation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="payeur"/>
+        <xs:element ref="montant"/>
+        <xs:element ref="date"/>
+        <xs:element ref="description"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="attlist.operation"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:attributeGroup name="attlist.operation">
+    <xs:attribute name="type"/>
+    <xs:attribute name="numero"/>
+  </xs:attributeGroup>
+  <xs:element name="payeur" type="xs:string"/>
+  <xs:element name="montant" type="xs:string"/>
+  <xs:element name="date" type="xs:string"/>
+  <xs:element name="description">
+    <xs:complexType mixed="true">
+      <xs:attributeGroup ref="attlist.description"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:attributeGroup name="attlist.description">
+    <xs:attribute name="categorie"/>
+  </xs:attributeGroup>
+</xs:schema>

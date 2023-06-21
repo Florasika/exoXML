@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<livre_comptes>
+    <mois>Juillet 2010</mois>
+    <solde_initial>131.40</solde_initial>
+    <operation type="cheque">
+        <payeur>SNCM</payeur>
+        <montant>1344.88</montant>
+        <date>03-07-2010</date>
+        <description categorie="salaire">salaire de Juin</description>
+    </operation>
+    <operation type="carte">
+        <payeur>SNCF</payeur>
+        <montant>-88.00</montant>
+        <date>06-07-2010</date>
+        <description categorie="vacances">billets de train Perpignan</description>
+    </operation>
+    <operation type="carte">
+        <payeur>DAB</payeur>
+        <montant>-40.00</montant>
+        <date>10-07-2010</date>
+        <description categorie="liquide">argent de poche</description>
+    </operation>
+    <operation type="cheque" numero="1003">
+        <payeur>Les flots bleus</payeur>
+        <montant>-90.45</montant>
+        <date>17-07-2010</date>
+        <description categorie="vacances">camping Perpignan</description>
+    </operation>
+    <operation type="cheque" numero="1005">
+        <payeur>Bernard Merle</payeur>
+        <montant>-987.32</montant>
+        <date>20-07-2010</date>
+        <description categorie="loyer">loyer de juillet</description>
+    </operation>
+</livre_comptes>
+

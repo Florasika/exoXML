@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <!ELEMENT livre_comptes (mois, solde_initial, operation*)>
+  <!ELEMENT mois (#PCDATA)>
+  <!ELEMENT solde_initial (#PCDATA)>
+  <!ELEMENT operation (payeur, montant, date, description)>
+  <!ATTLIST operation type CDATA #IMPLIED>
+  <!ATTLIST operation numero CDATA #IMPLIED>
+  <!ELEMENT payeur (#PCDATA)>
+  <!ELEMENT montant (#PCDATA)>
+  <!ELEMENT date (#PCDATA)>
+  <!ELEMENT description (#PCDATA)>
+  <!ATTLIST description categorie CDATA #IMPLIED>  
+
